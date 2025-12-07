@@ -19,7 +19,7 @@ document.querySelector('#but3').addEventListener('click',()=>{
 
 //pasek postępu
 
-let postep=0;
+let postep=4;
 let kontrolki=document.querySelectorAll('.form1');
 //let ile=document.querySelector('#progres>div').style.width;
 for(let i=0;i<kontrolki.length;i++){
@@ -34,7 +34,21 @@ for(let i=0;i<kontrolki.length;i++){
     });
 }
 
+let zatwierdz=document.querySelector("#guzik").addEventListener('click',()=>{
+    let imie=document.querySelector('#imie').value;
+    let nazwisko=document.querySelector('#nazwisko').value;
+    let data=document.querySelector('#data').value;
+    let ulica=document.querySelector('#ulica').value;
+    let numer=document.querySelector('#numer').value;
+    let miasto=document.querySelector('#miasto').value;
+    let telefon=document.querySelector('#telefon').value;
+    let rodo=document.querySelector('#rodo').value;
+    const tablica=[
+        imie,nazwisko,data,ulica,numer,miasto,telefon,rodo
+    ]
+    console.log(tablica);
 
+})
 
 
 
