@@ -18,7 +18,7 @@ document.querySelector('#but3').addEventListener('click',()=>{
 });
 
 //pasek postępu
-
+//bzyk
 let postep=4;
 let kontrolki=document.querySelectorAll('.form1');
 //let ile=document.querySelector('#progres>div').style.width;
