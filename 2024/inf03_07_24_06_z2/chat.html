@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <div id="baner"><h2>Chat</h2></div>
+
+    <div id="prawy">
+        <h3>Chaty</h3>
+        <ul>
+            <li>Ogólny</li>
+            <li>Tematyczne
+                <ol>
+                    <li>Turystyczny</li>
+                    <li>Żeglarski</li>
+                    <li>Filatelistyczny</li>
+                    <li>Hodowla zwierzątek domowych</li>
+
+                </ol>
+
+            </li>
+        </ul>
+        <h3>Uczestnicy </h3>
+        <p>Jolanta Nowak</p>
+        <img src="Jolka.jpg" alt="Jolanta Nowak">
+        <p>Krzysztof Łukasiński</p>
+        <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+    </div>
+        <div id="dol">
+        <div id="chat">
+              <div class="jolka">
+	                <img src="Jolka.jpg" alt="Jolanta Nowak">
+                    <p>Cześć idziesz jutro do kina?</p>
+               </div>
+	
+                <div class="krzysiek">
+	                <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+                    <p>Tak! A Ty?</p>
+	            </div>
+        </div>
+        Wpisz wiadomość: <input type="text" id="send"> <input type="button" id="guzik1" value="Wyślij"><br>
+        <input type="button" id="guzik2" value="Generuj losową odpowiedź">
+    </div>
+    <div id="stopka"><h5>Czat wykonał: 0000000000</h5></div>
+    <script>
+       
+        document.querySelector('#guzik1').addEventListener('click',()=>{
+            let wypowiedzj=document.querySelector('#send').value;
+            //tworzenie obiektu
+             const jolkaDiv = document.createElement('div');
+                jolkaDiv.classList.add('jolka');
+
+                const jolkaImg = document.createElement('img');
+                jolkaImg.src = 'Jolka.jpg';
+                jolkaImg.alt = 'Jolanta Nowak';
+                const jolkaP = document.createElement('p');
+                jolkaP.textContent = wypowiedzj;
+
+                jolkaDiv.appendChild(jolkaImg);
+                jolkaDiv.appendChild(jolkaP);
+                chat.appendChild(jolkaDiv);
+
+                chat.scrollTop = chat.scrollHeight;
+
+               
+
+        })
+
+        document.querySelector('#guzik2').addEventListener('click',()=>{
+            let wypowiedzi=[
+                "Świetnie!",
+                "Kto gra główną rolę?",
+                "Lubisz filmy Tego reżysera?",
+                "Będę 10 minut wcześniej",
+                "Może kupimy sobie popcorn?",
+                "Ja wolę Colę",
+                "Zaproszę jeszcze Grześka",
+                "Tydzień temu też byłem w kinie na Diunie",
+                "Ja funduję bilety"
+
+            ];
+
+        const los = Math.floor(Math.random() * wypowiedzi.length);
+        let wypowiedzk=wypowiedzi[los];   
+       
+        let krzychuDiv=document.createElement('div');
+            krzychuDiv.classList.add('krzysiek');
+            // alert(wypowiedzk); 
+            let krzychuImg=document.createElement('img');
+            krzychuImg.src='Krzysiek.jpg';
+            krzychuImg.alt='Krzysztof Łukasiński';
+            let krzychuP=document.createElement('p');
+            krzychuP.textContent=wypowiedzk;
+            krzychuDiv.appendChild(krzychuImg);
+            krzychuDiv.appendChild(krzychuP);
+            chat.appendChild(krzychuDiv);
+            chat.scrollTop = chat.scrollHeight;
+        });
+    </script>
+
+</body>
+</html>
