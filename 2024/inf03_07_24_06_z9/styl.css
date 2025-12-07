@@ -1,0 +1,62 @@
+* {
+    font-family: Georgia;
+    color: white;
+}
+header, footer {
+    background-color: maroon;
+    text-align: center;
+    padding: 2px;
+}
+#naw1, #content, #naw2 {
+    background-color: lightsalmon;
+    height: 527px;
+
+}
+#naw1{
+    width: 15%;
+    float: left;
+}
+#content{
+    width: 70%;
+    float: left;
+}
+#naw2{
+    width: 15%;
+    float: right;
+}
+#miniatury {
+    clear: both;
+    background-color: maroon;
+}
+input[type=button]{
+    background-color: lightsalmon;
+    color: maroon;
+    border: none;
+    font-size: 400%;
+    display: block;
+    margin: auto;
+    padding-top: 210px;
+}
+#miniatury>img{
+    height: 70px;
+    animation: animacjaMiniatur 4s;
+
+}
+@keyframes animacjaMiniatur {
+    from {
+        padding-left: 50px;
+    }
+    to {
+        padding-left: 0px;
+    }
+}
+#content>img{
+    display: block;
+    margin: auto;
+    padding-top: 45px;
+    transition: transform 5s ease;
+    
+}
+#content>img:hover {
+    transform: scale(1.2);
+}
