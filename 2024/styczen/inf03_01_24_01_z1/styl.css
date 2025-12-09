@@ -1,0 +1,53 @@
+body {
+    background-color: #eeeeee;
+    font-family: Helvetica;
+}
+#totus{
+    width: 90%;
+    margin: auto;
+}
+#logo, #menu{
+    background-color: lightblue;
+    height: 100px;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#logo{
+    float: left;
+}
+#menu{
+    float: right;
+    
+}
+
+#baner{
+    clear: both;
+    background-color: #dddddd;
+    height: 200px; 
+}
+#content{
+    color: navy;
+    padding: 50px;
+    height: 400px;
+}
+#footer{
+    background-color: lightblue;
+   text-align: right;
+   padding: 10px;
+}
+input[type="button"]{
+    background-color: lightblue;
+    color: navy;
+}
+a{
+    text-decoration: none;
+    color: navy;
+    font-size: 150%;
+    font-weight: bold;
+    margin: 10px;
+    padding: 5px;
+}
+a:hover{
+    border: 1px solid navy;
+}
